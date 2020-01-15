@@ -1,0 +1,10 @@
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\bin\Debug\artemFordPuzzle.exe.config
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\bin\Debug\artemFordPuzzle.exe
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\bin\Debug\artemFordPuzzle.pdb
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artemFordPuzzle.csprojAssemblyReference.cache
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artemFordPuzzle.Properties.Resources.resources
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artemFordPuzzle.csproj.GenerateResource.cache
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artemFordPuzzle.csproj.CoreCompileInputs.cache
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artemFordPuzzle.exe
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artemFordPuzzle.pdb
+C:\Users\opilane\projects\artemFordPuzzle\artemFordPuzzle\obj\Debug\artem_figures.Form1.resources
