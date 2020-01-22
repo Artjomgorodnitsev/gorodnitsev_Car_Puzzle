@@ -15,7 +15,10 @@ namespace artem_figures
         bool SquareleClicked, SquareleClicked2, DoorClicked, DoorClicked2, HoodClicked, RoofClicked, TrunkClicked = false;
         bool StatusDone, StatusDone2, StatusDone3, StatusDone4, StatusDone5, StatusDone6, StatusDone7 = false;
         int  SquareX, SquareY, SquareX2, SquareY2, DoorX, DoorY, DoorX2, DoorY2, HoodX, HoodY, RoofX, RoofY,TrunkX,TrunkY = 0;
-        int X, Y, dX, dY;
+
+        
+
+        int X, Y, X2, Y2, X3, Y3, X4, Y4, X5, Y5, X6, Y6, X7, Y7;
         int LastClicked = 0;
         Image img,img2, img3,img4,img5,img6;
 
@@ -60,6 +63,7 @@ namespace artem_figures
                 {
                     square.X = e.X - SquareX;
                     square.Y = e.Y - SquareY;
+                    
 
                 }
             }
@@ -131,6 +135,7 @@ namespace artem_figures
 
 
             }
+            
             if (((label2.Location.X < square2.X + square2.Width) && (label2.Location.X > square2.X))
               && ((label2.Location.Y < square2.Y + square2.Height) && (label2.Location.Y > square2.Y)))
             {
@@ -189,6 +194,10 @@ namespace artem_figures
             if(StatusDone==true && StatusDone2==true && StatusDone3==true && StatusDone4==true && StatusDone5==true && StatusDone6==true && StatusDone7==true)
             {
                 label8.Text = "Всё собрано";
+            }
+            else
+            {
+                label8.Text = "...";
             }
 
 
@@ -288,7 +297,7 @@ namespace artem_figures
                 Y = trunk.Y;
                 if (StatusDone7 == true)
                 {
-                    roof.Size = new Size(265, 205);
+                    trunk.Size = new Size(265, 205);
                 }
                 else
                 {
@@ -321,7 +330,7 @@ namespace artem_figures
                     square.Size = new Size(150,150);
                 }
             }
-            else if ((e.X < square2.X + square2.Width) && (e.X > square2.X))
+            if ((e.X < square2.X + square2.Width) && (e.X > square2.X))
             {
                 if ((e.Y < square2.Y + square2.Height) && (e.Y > square2.Y))
                 {
@@ -332,7 +341,7 @@ namespace artem_figures
                     square2.Size = new Size(150, 150);
                 }
             }
-            else if ((e.X < door.X + door.Width) && (e.X > door.X))
+            if ((e.X < door.X + door.Width) && (e.X > door.X))
             {
                 if ((e.Y < door.Y + door.Height) && (e.Y > door.Y))
                 {
@@ -343,7 +352,7 @@ namespace artem_figures
                     door.Size = new Size(200, 143);
                 }
             }
-            else if ((e.X < door2.X + door2.Width) && (e.X > door2.X))
+            if ((e.X < door2.X + door2.Width) && (e.X > door2.X))
             {
                 if ((e.Y < door2.Y + door2.Height) && (e.Y > door2.Y))
                 {
@@ -354,7 +363,7 @@ namespace artem_figures
                     door2.Size = new Size(200, 143);
                 }
             }
-            else if ((e.X < hood.X + hood.Width) && (e.X > hood.X))
+            if ((e.X < hood.X + hood.Width) && (e.X > hood.X))
             {
                 if ((e.Y < hood.Y + hood.Height) && (e.Y > hood.Y))
                 {
@@ -365,7 +374,7 @@ namespace artem_figures
                     hood.Size = new Size(270, 190);
                 }
             }
-            else if ((e.X < roof.X + roof.Width) && (e.X > roof.X))
+            if ((e.X < roof.X + roof.Width) && (e.X > roof.X))
             {
                 if ((e.Y < roof.Y + roof.Height) && (e.Y > roof.Y))
                 {
@@ -376,7 +385,7 @@ namespace artem_figures
                     roof.Size = new Size(570, 150);
                 }
             }
-            else if ((e.X < trunk.X + trunk.Width) && (e.X > trunk.X))
+            if ((e.X < trunk.X + trunk.Width) && (e.X > trunk.X))
             {
                 if ((e.Y < trunk.Y + trunk.Height) && (e.Y > trunk.Y))
                 {
@@ -404,6 +413,85 @@ namespace artem_figures
             e.Graphics.DrawImage(img4, hood);
             e.Graphics.DrawImage(img5, roof);
             e.Graphics.DrawImage(img6, trunk);
+            
+           
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            StatusDone = false;
+            square.X = 200;
+            square.Y = 10;
+            square.Size = new Size(50, 50);
+            StatusDone2 = false;
+            square2.X = 500;
+            square2.Y = 10;
+            square2.Size = new Size(50, 50);
+            StatusDone3 = false;
+            door.X = 700;
+            door.Y = 10;
+            door.Size = new Size(67, 48);
+            StatusDone4 = false;
+            door2.X = 600;
+            door2.Y = 10;
+            door2.Size = new Size(67, 48);
+            StatusDone5 = false;
+            hood.X = 300;
+            hood.Y = 10;
+            hood.Size = new Size(90, 63);
+            StatusDone6 = false;
+            roof.X = 800;
+            roof.Y = 10;
+            roof.Size = new Size(190, 50);
+            StatusDone7 = false;
+            trunk.X = 50;
+            trunk.Y = 10;
+            trunk.Size = new Size(88, 68);
+
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            X = rand.Next(pictureBox1.Width-100);
+            Y = rand.Next(pictureBox1.Height- 400);
+            square.Location = new Point(X, Y);
+            square.Size = new Size(50, 50);
+            StatusDone = false;
+            X2 = rand.Next(pictureBox1.Width - 100);
+            Y2 = rand.Next(pictureBox1.Height - 400);
+            square2.Location = new Point(X2, Y2);
+            square2.Size = new Size(50, 50);
+            StatusDone2 = false;
+            X3 = rand.Next(pictureBox1.Width - 100);
+            Y3 = rand.Next(pictureBox1.Height - 400);
+            door.Location = new Point(X3, Y3);
+            door.Size = new Size(67, 48);
+            StatusDone3 = false;
+            X4 = rand.Next(pictureBox1.Width - 100);
+            Y4 = rand.Next(pictureBox1.Height - 400);
+            door2.Location = new Point(X4, Y4);
+            door2.Size = new Size(67, 48);
+            StatusDone4 = false;
+            X5=rand.Next(pictureBox1.Width - 100);
+            Y5= rand.Next(pictureBox1.Height - 400);
+            hood.Location = new Point(X5, Y5);
+            hood.Size = new Size(90, 63);
+            StatusDone5 = false;
+            X6 = rand.Next(pictureBox1.Width - 100);
+            Y6 = rand.Next(pictureBox1.Height - 400);
+            roof.Location = new Point(X6, Y6);
+            roof.Size = new Size(190, 50);
+            StatusDone6 = false;
+            X7 = rand.Next(pictureBox1.Width - 100);
+            Y7 = rand.Next(pictureBox1.Height - 400);
+            trunk.Location = new Point(X7, Y7);
+            trunk.Size = new Size(88, 68);
+            StatusDone7 = false;
+
+
+
 
         }
     }
